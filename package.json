@@ -1,27 +1,44 @@
 {
-  "name": "utils",
+  "name": "@andyluo/utils",
+  "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@7.0.1",
   "description": "collection of common JavaScript / TypeScript utils by @andyLuo",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "lint": "eslint .",
-    "release": "bumpp --commit --push --tag",
-    "start": "esno src/index.ts",
-    "typecheck": "tsc --noEmit",
-    "test": "vitest"
-  },
+  "author": "@andyLuo",
+  "license": "MIT",
+  "homepage": "https://github.com/andylou0102/utils#readme",
   "repository": {
     "type": "git",
     "url": "git+https://git@github.com/andylou0102/utils.git"
   },
+  "bugs": {
+    "url": "https://github.com/andylou0102/utils/issues"
+  },
   "keywords": [
     "utils"
   ],
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "*.d.ts"
   ],
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "eslint .",
+    "release": "bumpp --commit --push --tag && npm publish",
+    "start": "esno src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.36.0",
     "@rollup/plugin-alias": "^4.0.2",
@@ -40,11 +57,5 @@
     "typescript": "^4.9.3",
     "vite": "^3.2.4",
     "vitest": "^0.25.3"
-  },
-  "author": "@andyLuo",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/andylou0102/utils/issues"
-  },
-  "homepage": "https://github.com/andylou0102/utils#readme"
+  }
 }
