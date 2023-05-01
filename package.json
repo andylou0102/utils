@@ -34,13 +34,14 @@
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "release": "bumpp --commit --push --tag && npm publish",
     "start": "esno src/index.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.36.0",
+    "@andyluo/eslint-config": "^1.0.4",
     "@rollup/plugin-alias": "^4.0.2",
     "@rollup/plugin-commonjs": "^23.0.3",
     "@rollup/plugin-json": "^5.0.2",
@@ -48,7 +49,7 @@
     "@types/node": "^18.11.9",
     "@types/throttle-debounce": "^5.0.0",
     "bumpp": "^8.2.1",
-    "eslint": "^8.28.0",
+    "eslint": "^8.39.0",
     "esno": "^0.16.3",
     "rollup": "^3.5.0",
     "rollup-plugin-dts": "^5.0.0",

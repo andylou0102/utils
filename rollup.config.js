@@ -26,7 +26,7 @@ const plugins = [
 ]
 
 export default [
-  ...entries.map(input => ({
+  ...entries.map((input) => ({
     input,
     output: [
       {
@@ -41,7 +41,7 @@ export default [
     external: [],
     plugins,
   })),
-  ...entries.map(input => ({
+  ...entries.map((input) => ({
     input,
     output: {
       file: input.replace('src/', '').replace('.ts', '.d.ts'),

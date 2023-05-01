@@ -17,7 +17,7 @@ export interface ControlledPromise<T = void> extends Promise<T> {
  * ```
  */
 
-export function createControlledPromise<T>() {
+export function createControlledPromise<T> () {
   let resolve: ((value: T | PromiseLike<T>) => void) = () => {}
   let reject: (reason?: any) => void = () => {}
   const promise = new Promise<T>((_resolve, _reject) => {

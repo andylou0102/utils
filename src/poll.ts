@@ -1,10 +1,8 @@
 import { delay } from './delay'
 
-export const poll = (
-  fn: (stopFn: () => void) => Promise<void> | void,
+export function poll (fn: (stopFn: () => void) => Promise<void> | void,
   interval: number,
-  immediate = true,
-) => {
+  immediate = true) {
   let stopped = false
   const timeoutId = setTimeout(async () => {
     while (!stopped) {
@@ -13,7 +11,7 @@ export const poll = (
     }
   }, immediate ? 0 : interval)
 
-  function stop() {
+  function stop () {
     clearTimeout(timeoutId)
     stopped = true
   }
