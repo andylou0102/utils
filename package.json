@@ -1,7 +1,7 @@
 {
   "name": "@andyluo/utils",
   "type": "module",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "packageManager": "pnpm@9.0.6",
   "description": "collection of common JavaScript / TypeScript utils by @andyLuo",
   "author": "@andyLuo",
