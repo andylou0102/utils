@@ -1,5 +1,7 @@
 # @andyluo/utils
 
+[![npm](https://img.shields.io/npm/v/@andyluo/utils)](https://www.npmjs.com/package/@andyluo/utils)
+
 collection of common JavaScript / TypeScript utils by [@andyluo](https://github.com/andylou0102).
 
 - Tree-shakable ESM
